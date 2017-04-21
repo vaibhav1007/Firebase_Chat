@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+
+    tools:context="com.tristate.firebasechat.activity.ChatConverstion">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/reclerChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottom"
+        android:padding="@dimen/margin_small"
+      >
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="#E0E0EA"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_small">
+
+        <EditText
+            android:id="@+id/edtMessage"
+            android:hint="Enter message.."
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:maxLines="6"
+            android:background="@drawable/white_round_background"
+            android:padding="10dp"
+            android:fontFamily="sans-serif"
+
+            android:layout_marginRight="57dp"
+            android:layout_alignBottom="@+id/relativeLayout"
+            android:layout_toLeftOf="@+id/relativeLayout"
+            android:layout_toStartOf="@+id/relativeLayout"
+            android:layout_marginEnd="57dp" />
+
+        <RelativeLayout android:layout_height="40dp"
+            android:layout_width="80dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/relativeLayout">
+
+
+        <ImageView
+             android:id="@+id/btnSend"
+             android:layout_width="80dp"
+             android:layout_height="40dp"
+            android:background="@drawable/buttonback"
+              />
+            <TextView
+                android:id="@+id/myImageViewText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btnSend"
+                android:layout_alignTop="@+id/btnSend"
+                android:layout_alignRight="@+id/btnSend"
+                android:layout_alignBottom="@+id/btnSend"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:text="SEND"
+                android:textColor="#000000" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
